@@ -1,0 +1,19 @@
+{
+  "name": "videocheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "http-proxy": "^1.17.0",
+    "randomstring": "^1.1.5",
+    "request": "^2.87.0",
+    "transformer-proxy": "^0.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oganime vod drm team",
+  "license": "UNLICENSED"
+}
