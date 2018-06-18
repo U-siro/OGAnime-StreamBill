@@ -7,13 +7,6 @@ var http = require('http'),
 var app = connect();
 var path = require('path')
 
-var fs = require('fs');
-
-// This line is from the Node.js HTTPS documentation.
-var options = {
-  key: fs.readFileSync('private.key'),
-  cert: fs.readFileSync('certificate.crt')
-};
 
 
 var urlStorage = {
@@ -157,7 +150,7 @@ function procReq(req, res, next) {
 
       //console.log("https://stream.oganime.com" + originalUrl);
       proxy.web(req, res, {
-        target: "http://10.0.3.237:8001" + originalUrl,
+        target: "http://127.0.0.1:8001" + originalUrl,
         secure: false,
         ignorePath: true
       });
