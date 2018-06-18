@@ -3,7 +3,7 @@ const request = require("request");
 var http = require('http'),
   connect = require('connect'),
   httpProxy = require('http-proxy');
-  var https = require('https');
+
 var app = connect();
 var path = require('path')
 
@@ -150,7 +150,7 @@ function procReq(req, res, next) {
 
       //console.log("https://stream.oganime.com" + originalUrl);
       proxy.web(req, res, {
-        target: "http://127.0.0.1:8001" + originalUrl,
+        target: "http://127.0.0.1:8003" + originalUrl,
         secure: false,
         ignorePath: true
       });
@@ -248,6 +248,4 @@ var urlto = "/" + randomstring.generate(16) + ".m3u8";
 }
 var server = http.createServer(app);
 
-server.listen(5050);
-
-https.createServer(options, app).listen(443);
+server.listen(8001);
