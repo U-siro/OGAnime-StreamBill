@@ -70,6 +70,7 @@ var transformerFunction_m3u8 = function(data, req, res) {
       urlStorage["/" + newPath] = {}; // 주소 등록
       urlStorage["/" + newPath]['path'] = anotherUrl.pathname; // 주소 등록
       urlStorage["/" + newPath]['count'] = -1; // 주소 등록
+      //만료시간은 모 sid의 값을 적용?해야하나
       urlStorage["/" + newPath]['expire'] = (+new Date) + (30 * 60 * 1000); // 20초동안 유효
       urlStorage["/" + newPath]['sid'] = sid; // 20초동안 유효
       urlStorage["/" + newPath]['active'] = true;
