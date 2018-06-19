@@ -29,7 +29,7 @@ var urlStorage = {
     "path": "/hls_beta/maidragon01.mp4/master.m3u8",
     "count": -1,
     "expire": -1
-  },
+  }
 };
 
 var per_user_url = {};
@@ -109,8 +109,7 @@ setInterval(function() {
 
     if (!urlStorage[key].expired && data.expire > 0 && data.expire < (+new Date)) {
       console.log(data.path + " has been expired, so Deleting it.");
-      urlStorage[key].active=false;
-      urlStorage[key].expired=true;
+      delete urlStorage[key];
     }
 
   }
